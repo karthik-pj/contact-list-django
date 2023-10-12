@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    color: white;
+}
+
+ion-icon{
+    color: red;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+}
+
+form{
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+input{
+    text-align: center;
+}

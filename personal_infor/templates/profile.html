@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+    <title> Profile info </title>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
+        <div class="container justify-content-center">
+            <ion-icon ios="person-circle-outline" md="person-circle-sharp" size="large"></ion-icon>&nbsp&nbsp
+            <h3> PROFILE INFO </h3>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="info-list">
+            <ion-icon ios="person-circle-outline" md="person-circle-sharp" size="large" style="color: black;"></ion-icon>
+            <h1 style="color: black;" class="name"> {{prof.name | title}} </h1>
+        </div>
+        <hr>
+        <br><br>
+        <section>
+            <ion-icon ios="heart-half-outline"  md="heart-half-sharp" size="large" style="color: gray;" ></ion-icon>
+            <h4 class="relationship" style="color: grey;"> {{prof.relationship}} </h4>
+            <br><br>
+            <ion-icon ios="call-outline" md="call-sharp" size="large" style="color: gray;"></ion-icon>
+            <h4 class="number" style="color: gray;">{{prof.number}} </h4>
+        </section>
+        <br>
+        <hr>
+    </div>
+        <a href="/home"> <ion-icon ios="arrow-back-circle-outline" md="arrow-back-circle-sharp" size="large" style="color: red;"></ion-icon> </a> nbspnbspnbspnbsp
+        <a href="{% url 'edit' prof.id %}" style="text-decoration: none;"> <ion-icon ios="settings-outline" md="settings-sharp" size="large" style="color: rgb(45, 141, 45);"></ion-icon > </a>
+        <p style="color: black;"> Back &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Edit </p>   
+    <div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
